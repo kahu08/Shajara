@@ -1,0 +1,7 @@
+<% if object.errors.any? %>
+  <h3>Please fix the errors:</h3>
+  <ul>
+    <%object.errors.full_messages.each do |message|%>
+    <li><%=message%></li>
+  </ul>
+<% end %>
