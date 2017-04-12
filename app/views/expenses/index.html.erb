@@ -1,5 +1,3 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
 
 <%= render 'form'%>
 
@@ -13,6 +11,7 @@
         <% @expenses.each do |expense| %>
         <td><%=expense.amount%></td>
         <td><%=expense.description%></td>
+      <th><%= link_to expense_path(expense), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
         <% end %>
         <% else %>
         <h3>No expenses today!!</h3>

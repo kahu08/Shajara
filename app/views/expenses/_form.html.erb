@@ -1,5 +1,5 @@
 <%= render('layouts/errors', :object => @expense)%>
-<%=form_for @expense  do |f| %>
+<%=form_for @expense, remote: true  do |f| %>
 <%= f.label :Amount %>
 <%= f.text_field :amount %>
 <%= f.label :description %>
