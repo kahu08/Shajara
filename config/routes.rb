@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'loans/index'
+
+  get 'loans/show'
+
+  get 'loans/edit'
+
+  get 'loans/new'
+
   get 'expenses/index'
 
   get 'expenses/show'
