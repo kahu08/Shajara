@@ -1,0 +1,8 @@
+<%= render "layouts/errors", :object => @expense%>
+<%=form_for @expense,  do |f| %>
+<%= f.label :Amount %>
+<%= f.text_field :Amount %>
+<%= f.label :description %>
+<%= f.file_field :description %>
+<%= f.submit %>
+<%end%>
