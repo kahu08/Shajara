@@ -3,8 +3,8 @@ class CreateLoans < ActiveRecord::Migration[5.0]
     create_table :loans do |t|
       t.string :to
       t.datetime :repayment_date
-      t.description :text
-      
+      t.text :description
+
       t.timestamps
     end
   end
