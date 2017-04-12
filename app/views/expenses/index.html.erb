@@ -9,12 +9,12 @@
         <th>Description</th>
     </tr>
     <tr>
-        <% if  expense.any? %>
-        <% for @expenses.each do |expense| %>
+        <% if  @expenses.any? %>
+        <% @expenses.each do |expense| %>
         <td><%=expense.amount%></td>
         <td><%=expense.description%></td>
         <% end %>
-    <% else %>
+        <% else %>
         <h3>No expenses today!!</h3>
         <% end %>
 

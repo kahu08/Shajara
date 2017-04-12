@@ -25,5 +25,6 @@ source 'https://rubygems.org'
     gem 'spring-watcher-listen', '~> 2.0.0'
   end
 
+  gem 'bootstrap-sass'
+  gem 'sprockets-rails'
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-  

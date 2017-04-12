@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-root to: "expense#index"
+root :to => "expenses#index"
+
+resources :expenses
 end
