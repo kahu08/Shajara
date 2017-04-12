@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Shajara</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Shajara</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-  <body>
-    <%= yield %>
-  </body>
+        <script src="https://use.fontawesome.com/59c76c05a4.js"></script>
+
+    </head>
+
+    <body>
+      <%= render "layouts/navigation"%>
+        <%= yield %>
+
+    </body>
 </html>
