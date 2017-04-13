@@ -25,7 +25,6 @@ class ExpensesController < ApplicationController
   end
 
   def create
-    # @expense = Expense.find(params[:id])
     @expense = Expense.new(expense_params)
     if @expense.save
       redirect_to root_path

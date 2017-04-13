@@ -1,1 +1,20 @@
 <%= render 'form'%>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <% if  @debts.any? %>
+        <% @debts.each do |debt| %>
+        <td><%=debt.amount%></td>
+        <td><%=debt.description%></td>
+      <th><%= link_to debt_path(debt), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
+      <th><%= link_to edit_debt_path(debt) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></th>
+        <% end %>
+        <% else %>
+        <h3>No debts today!!</h3>
+        <% end %>
+
+    </tr>
+</table>
