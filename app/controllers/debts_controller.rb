@@ -34,6 +34,12 @@ class DebtsController < ApplicationController
     end
   end
 
+  def destroy
+    @debt = Debt.find(params[:id])
+    @debt.destroy
+    redirect_to debts_path
+  end
+
   def new
   end
   private
