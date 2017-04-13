@@ -1,0 +1,10 @@
+<%= render('layouts/errors', :object => @debt)%>
+<%=form_for @debt, remote: true  do |f| %>
+<%= f.label :Amount %>
+<%= f.text_field :amount %>
+<%=f.label :receive_date%>
+<%=f.text_field :receive_date%>
+<%= f.label :Description %>
+<%= f.text_field :description %>
+<%= f.submit %>
+<%end%>
