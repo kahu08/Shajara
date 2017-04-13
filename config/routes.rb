@@ -3,6 +3,7 @@ root :to => "expenses#index"
 
 resources :debts
 
+resources :loans
 
 resources :expenses
 end
