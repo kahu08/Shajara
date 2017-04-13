@@ -2,12 +2,16 @@
 <table>
     <tr>
         <th>Amount</th>
+        <th>to</th>
+        <th>repayment_date</th>
         <th>Description</th>
     </tr>
     <tr>
         <% if  @loans.any? %>
         <% @loans.each do |loan| %>
         <td><%=loan.amount%></td>
+        <td><%=loan.to%></td>
+        <td><%= loan.repayment_date%></td>
         <td><%=loan.description%></td>
       <th><%= link_to loan_path(loan), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
       <th><%= link_to edit_loan_path(loan) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></th>
