@@ -1,15 +1,15 @@
-class loansController < ApplicationController
+class LoansController < ApplicationController
   def index
-    @loans = loan.all
-    @loan = loan.new
+    @loans = Loan.all
+    @loan = Loan.new
   end
 
   def show
-    @loan = loan.find(params[:id])
+    @loan = Loan.find(params[:id])
   end
 
   def create
-    @loan = loan.new(loan_params)
+    @loan = Loan.new(loan_params)
     if @loan.save
       redirect_to loans_path
       respond_to do |format|
@@ -22,11 +22,11 @@ class loansController < ApplicationController
   end
 
   def edit
-    @loan = loan.find(params[:id])
+    @loan = Loan.find(params[:id])
   end
 
   def  update
-    @loan = loan.find(params[:id])
+    @loan = Loan.find(params[:id])
     if @loan.update(loan_params)
       redirect_to loans_path
     else
@@ -35,7 +35,7 @@ class loansController < ApplicationController
   end
 
   def destroy
-    @loan = loan.find(params[:id])
+    @loan = Loan.find(params[:id])
     @loan.destroy
     redirect_to loans_path
   end
