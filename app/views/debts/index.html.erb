@@ -1,5 +1,5 @@
 <%= render 'form'%>
-<table>
+<table align="center">
     <tr>
       <th>Amount</th>
       <th>from</th>
@@ -9,12 +9,12 @@
     <tr>
         <% if  @debts.any? %>
         <% @debts.each do |debt| %>
-        <td><%=debt.amount%></td>
-        <td><%=debt.from%></td>
-        <td><%= debt.receive_date%></td>
-        <td><%=debt.description%></td>
-      <th><%= link_to debt_path(debt), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
-      <th><%= link_to edit_debt_path(debt) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></th>
+        <td style="width:7em;"  class="expense"><%=debt.amount%></td>
+        <td style="width:5em;"  class="expense"><%=debt.from%></td>
+        <td style="width:10em;"  class="expense"><%= debt.receive_date%></td>
+        <td style="width:15em;"  class="description"><%=debt.description%></td>
+      <th style="width:5em;"  class="del"><%= link_to debt_path(debt), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
+      <th style="width:5em;"  class="edit"><%= link_to edit_debt_path(debt) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></th>
         <% end %>
         <% else %>
         <h3>No debts today!!</h3>

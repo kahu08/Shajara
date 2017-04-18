@@ -24,7 +24,9 @@ source 'https://rubygems.org'
     gem 'spring'
     gem 'spring-watcher-listen', '~> 2.0.0'
   end
-
+  gem 'chartkick'
+  gem 'groupdate'
+  gem 'active_median'
   gem 'bootstrap-sass'
   gem 'sprockets-rails'
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

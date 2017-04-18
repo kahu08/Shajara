@@ -1,22 +1,24 @@
+<div class="container-fluid">
 
 <%= render 'form'%>
 
-<table>
+
+<table align="center">
     <tr>
-        <th>Amount</th>
+        <th>Amount(Ksh)</th>
         <th>Description</th>
     </tr>
+    <% @expenses.each do |expense| %>
     <tr>
-        <% if  @expenses.any? %>
-        <% @expenses.each do |expense| %>
-        <td><%=expense.amount%></td>
-        <td><%=expense.description%></td>
-      <th><%= link_to expense_path(expense), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></th>
-      <th><%= link_to edit_expense_path(expense) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></th>
-        <% end %>
-        <% else %>
-        <h3>No expenses today!!</h3>
-        <% end %>
+        <td style="width:10em;" class="expense"><%=expense.amount%></td>
+        <td class="description"><%=expense.description%></td>
+      <td style="width:5em;" class="del"><%= link_to expense_path(expense), data: {confirm: 'delete field?', method: 'delete'},class: "btn btn-danger" do%><i class="glyphicon glyphicon-trash" aria-hidden="true"></i><% end %></td>
+      <td style="width:5em;" class="edit"><%= link_to edit_expense_path(expense) do%><i class="glyphicon glyphicon-edit" aria-hidden="true"></i><%end%></td>
 
     </tr>
+    <% end %>
 </table>
+
+<%= link_to 'graph expense', homes_show_path%>
+
+</div>

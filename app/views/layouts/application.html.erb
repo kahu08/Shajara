@@ -2,18 +2,35 @@
 <html>
     <head>
         <title>Shajara</title>
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
+        <%= stylesheet_link_tag 'http://yandex.st/bootstrap/3.1.1/css/bootstrap.min.css' %>
+        <%= javascript_include_tag 'http://yandex.st/bootstrap/3.1.1/js/bootstrap.min.js' %>
+
         <%= csrf_meta_tags %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
         <script src="https://use.fontawesome.com/59c76c05a4.js"></script>
-
+        <script src="https://code.highcharts.com/highcharts.src.js"></script>
     </head>
 
     <body>
-      <%= render "layouts/navigation"%>
+      <div class="logo">
+        <%=image_tag("logo.png")%>
+      </div>
+
+        <%= render "layouts/navigation"%>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <%= yield %>
 
     </body>

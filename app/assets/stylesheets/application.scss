@@ -1,7 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
- /* The Overlay (background) */
+/*descriptions styles*/
+.description{
+  width: 20em;
+}
+.del{
+  border: solid blue 1px;
+}
+.expense{
+  border: solid blue 1px;
+}
+.description{
+  border: solid blue 1px;
+}
+.edit{
+  border: solid blue 1px;
+}
+.logo{
+  float: right;
+  padding-bottom: 70px;
+}
+/* The Overlay (background) */
  .overlay {
      /* Height & width depends on how you want to reveal the overlay (see JS below) */
      height: 100%;
