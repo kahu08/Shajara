@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
   def show
-     @visits = Visit.all
+      @visits = Visit.all
   end
 end
