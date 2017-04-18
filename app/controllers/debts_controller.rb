@@ -1,4 +1,5 @@
 class DebtsController < ApplicationController
+  before_action :authenticate_user! 
   def index
     @debts = Debt.all
     @debt = Debt.new
